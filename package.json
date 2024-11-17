@@ -3,8 +3,9 @@
   "version": "2.0.0",
   "homepage": "https://byteme6.github.io/AsyncAwaitProject",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "start": "parcel src/*.html --port 1499",
+    "build": "parcel build src/*.html --public-url /parcel-project-template/",
+    "host": "json-server --watch src/posts.json --port 1488"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,11 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "axios": "^1.7.7",
+    "handlebars": "^4.7.8",
+    "json-server": "^1.0.0-beta.3",
+    "modern-normalize": "^1.1.0",
+    "nanoid": "^5.0.8"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",

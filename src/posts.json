@@ -1,0 +1,10 @@
+{
+  "post": {
+    "title": "First post",
+    "body": "This is the first post",
+    "id": "1",
+    "author": "John Doe",
+    "likes": 0,
+    "comments": 0
+  }
+}
