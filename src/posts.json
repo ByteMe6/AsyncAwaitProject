@@ -1,10 +1,20 @@
 {
-  "post": {
-    "title": "First post",
+  "posts": [
+    {
+      "title": "First post",
     "body": "This is the first post",
     "id": "1",
     "author": "John Doe",
     "likes": 0,
     "comments": 0
-  }
+  },
+  {
+    "title": "Second post",
+    "body": "This is the second post",
+    "id": "2",
+    "author": "Oleksandr Polovka",
+    "likes": 0,
+      "comments": 0
+    }
+  ]
 }

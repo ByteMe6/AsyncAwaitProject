@@ -2,19 +2,24 @@ import Handlebars from 'handlebars';
 import axios from 'axios';
 
 async function loadPosts() {
-    const response = await axios.get('http://localhost:1488/posts'); // Using axios to fetch posts
-    const data = response.data; // Accessing data directly from the response
-    console.log(data);
-    const posts = document.querySelector('.posts');
+    try {
+        const response = await axios.get('http://localhost:1488/posts');
+        const data = response.data;
+        const postsContainer = document.querySelector('.posts');
 
-    posts.innerHTML = '';
+        postsContainer.innerHTML = '';
 
-    const templateResponse = await axios.get('src/temps/post.hbs'); // Using axios to fetch the template
-    console.log(templateResponse);
-    const templateSource = templateResponse.data; // Accessing data directly from the response
-    const template = Handlebars.compile(templateSource);
+        const template = document.querySelector('.template').innerHTML;
+        const compiledTemplate = Handlebars.compile(template);
 
-    posts.innerHTML = data.length > 0 ? data.map(post => template(post)).join('') : 'No posts available'; // Updated to handle multiple posts
+        postsContainer.innerHTML = data.length > 0 ?
+            data.map(post => compiledTemplate({ post })).join('') :
+            'No posts available';
+    } catch (error) {
+        console.error('Error loading posts:', error);
+        const postsContainer = document.querySelector('.posts');
+        postsContainer.innerHTML = 'Error loading posts. Please try again later.';
+    }
 }
 
 loadPosts();
