@@ -33,8 +33,9 @@ function addLikes(e) {
 
     axios.patch(`http://localhost:1488/posts/${postId}`, {
       likes: (likes += 1),
+    }).then(() => {
+      loadPosts();
     });
-    loadPosts();
   });
 }
 

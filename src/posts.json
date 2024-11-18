@@ -5,7 +5,7 @@
       "body": "This is the first post",
       "id": "1",
       "author": "John Doe",
-      "likes": 10,
+      "likes": 23,
       "comments": 0
     },
     {
@@ -13,7 +13,7 @@
       "body": "This is the second post",
       "id": "2",
       "author": "Oleksandr Polovka",
-      "likes": 2,
+      "likes": 22,
       "comments": 0
     }
   ]

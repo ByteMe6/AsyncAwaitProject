@@ -1,11 +1,10 @@
 <template class="template" id="template">
-    <article>
-        <h2>{{post.title}}</h2>
-        <p>{{post.body}}</p>
-        <p><strong>Author:</strong>👤 {{post.author}}</p>
-        <p><strong>Likes:</strong> {{post.likes}}</p>
-        <p><strong>Comments:</strong> {{post.comments}}</p>
-
+    <article class="postCard" data-aos="fade-up">
+        <h2 class="postTitle">{{post.title}}</h2>
+        <p class="postBody">{{post.body}}</p>
+        <p class="postAuthor"><strong>Author 👤: </strong>{{post.author}}</p>
+        <p><strong>Likes ❤️:</strong> {{post.likes}}</p>
+        <p><strong>Comments 💬:</strong> {{post.comments}}</p>
         <button class="like" data-id="{{post.id}}">Like ❤️</button>
     </article>
 </template>

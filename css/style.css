@@ -12,6 +12,7 @@ span {
 
 .postCard {
   background-color: rgb(184, 184, 184);
+  width: -moz-fit-content;
   width: fit-content;
   min-width: 200px;
   max-width: 700px;
@@ -21,6 +22,7 @@ span {
   margin: 16px;
   display: block;
 }
+
 .posts {
   display: flex;
   justify-content: flex-start;
@@ -29,16 +31,16 @@ span {
 .like {
   border-radius: 5px;
   border: 0;
-  background: #5b5b5b9b;
+  background: rgba(91, 91, 91, 0.6078431373);
   padding: 6px;
   color: #fff;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-transition: transform 1s ease;
-  &:hover {
-    background-color: #4b4b4b;
-    transform: rotate(1800deg);
-  }
+  transition: transform 1s ease;
+}
+.like:hover {
+  background-color: #4b4b4b;
+  transform: rotate(1800deg);
 }
